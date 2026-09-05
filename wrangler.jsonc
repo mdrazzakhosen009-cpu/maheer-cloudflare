@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "maheer-store",
+  "main": "./worker.js",
+  "compatibility_date": "2026-09-05",
+  "compatibility_flags": ["nodejs_compat", "nodejs_compat_populate_process_env"],
+  "workers_dev": true,
+  "assets": {
+    "directory": "./cloudflare-assets",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "secrets": {
+    "required": [
+      "TURSO_DATABASE_URL",
+      "TURSO_AUTH_TOKEN",
+      "GEMINI_API_KEY",
+      "ADMIN_PASSWORD"
+    ]
+  }
+}
