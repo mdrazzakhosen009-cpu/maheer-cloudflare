@@ -1,0 +1,15 @@
+MAHEER STORE — CLOUDFLARE v15
+
+1) GitHub repo root: keep worker.js, wrangler.jsonc, server.js, public/, admin/, cloudflare-assets/.
+2) Cloudflare Workers Builds build command: npx wrangler deploy
+3) wrangler.jsonc has no secrets.required block.
+4) In Cloudflare Worker Variables/Secrets, add these as runtime Variables (not build-only values):
+   TURSO_DATABASE_URL
+   TURSO_AUTH_TOKEN
+   GEMINI_API_KEY
+   GEMINI_MODEL
+   ADMIN_PASSWORD
+5) GEMINI_MODEL value: gemini-3.1-flash-lite
+6) Deploy. Website: /   Admin: /admin   Health: /api/health
+7) The worker configures the Express app from the Worker env bindings before the first API request.
+8) Product demo seed data is removed. Products/reviews/agents are real Turso data managed by Admin Panel.
