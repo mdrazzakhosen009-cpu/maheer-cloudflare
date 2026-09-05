@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "name": "maheer-cloudflare",
+  "name": "maheer-cloudflare",
   "main": "./worker.js",
   "compatibility_date": "2026-09-05",
   "compatibility_flags": ["nodejs_compat", "nodejs_compat_populate_process_env"],
